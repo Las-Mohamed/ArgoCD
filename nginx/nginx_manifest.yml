@@ -32,6 +32,6 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: nginx:latest
+        image: jenkins/jenkins:latest
         ports:
         - containerPort: 80
