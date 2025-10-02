@@ -7,8 +7,10 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 3000
-      targetPort: 3000
+    - port: 8080
+      targetPort: 8080
+      #GrafanaPort #port: 3000
+      #GrafanaPort #targetPort: 3000
       nodePort: 31000
       protocol: TCP
       name: http
@@ -32,6 +34,7 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: grafana/grafana:latest
+        image: jenkins/jenkins:latest
+        #image: grafana/grafana:latest
         ports:
         - containerPort: 80
